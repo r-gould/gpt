@@ -19,7 +19,7 @@ def main(dataloaders, gpt_params, lr, epochs, vocab_size,
                 pad_idx=pad_idx).to(device)
 
     if load_model:
-        model.load_state_dict(torch.load("gpt/saved/gpt.pt"))
+        model.load_state_dict(torch.load("saved/gpt.pt"))
 
     loss = nn.CrossEntropyLoss(ignore_index=pad_idx)
     optim = torch.optim.AdamW(model.parameters(), lr, betas=(0.9, 0.95))
@@ -36,11 +36,11 @@ if __name__ == "__main__":
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    datasets = WikiText2("gpt/data/downloads/", split=("train", "valid", "test"))
+    datasets = WikiText2("data/downloads/", split=("train", "valid", "test"))
     tokenizer = get_tokenizer("basic_english", language="en")
     model_name = "gpt1"
     
-    with open(f"gpt/{model_name}.yaml", "r") as stream:
+    with open(f"configs/{model_name}.yaml", "r") as stream:
         gpt_params = yaml.safe_load(stream)
 
     batch_size = 16
