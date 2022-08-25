@@ -4,7 +4,7 @@ An implementation of the GPT model in PyTorch, as described originally in the pa
 
 A demonstration for training the model is shown in main.py, and continuations can be generated as shown in the example below. 
 
-Config files for GPT-1, GPT-2, and GPT-3 models can be found in configs, and can be chosen from using model_name in main.py
+Config files for GPT-1, GPT-2, and GPT-3 models can be found in configs, and can be chosen from using the model_name argument in main.py
 
 # Example
 
@@ -14,20 +14,20 @@ Due to limited resources, examples of a model with GPT-1 parameters only trained
 (see main.py for definitions)
 >>> from src.generator import Generator
 >>> generator = Generator(model, tokenizer, vocab, device)
->>> generator.generate("the song was", steps=30)
+>>> generator.generate(prompt="the song was", steps=30)
 ['the', 'song', 'was', 'released', 'on', 'may', '1', ',', '2010', ',', 'in', 'the', 'united', 'states', 'on', 'the', 'billboard', 'hot', '100', ',', 'and', 'the', 'song', 'peaked', 'at', 'number', 'one', 'on', 'the', 'billboard', 'hot', '100', '.']
 
->>> generator.generate("england is most known for", steps=30)
+>>> generator.generate(prompt="england is most known for", steps=30)
 ['england', 'is', 'most', 'known', 'for', 'the', 'english', 'team', ',', 'as', 'the', 'most', 'popular', 'team', 'in', 'the', 'world', '.', 'it', 'was', 'the', 'first', 'time', 'since', 'the', 'world', 'war', 'ii', 'when', 'the', 'team', 'won', 'the', 'world', 'cup']
 
->>> generator.generate("the united states is most known for", steps=30)
+>>> generator.generate(prompt="the united states is most known for", steps=30)
 ['the', 'united', 'states', 'is', 'most', 'known', 'for', 'the', 'american', 'civil', 'war', ',', 'but', 'the', 'united', 'states', 'department', 'of', 'war', 'in', 'the', 'united', 'states', 'is', 'the', 'most', 'important', 'part', 'of', 'the', 'world', 'war', 'and', 'the', 'united', 'states', 'army']
 ```
 
 An example of a very bad continuation,
 
 ```
->>> generator.generate("the meaning of life is", steps=30)
+>>> generator.generate(prompt="the meaning of life is", steps=30)
 ['the', 'meaning', 'of', 'life', 'is', 'the', 'most', 'common', 'in', 'the', 'world', '.', 'it', 'is', 'the', 'most', 'common', 'name', 'for', 'the', 'world', 'of', 'ireland', 'and', 'the', 'most', 'common', 'starling', 'in', 'the', 'united', 'states', '.', 'it', 'is']
 ```
 
