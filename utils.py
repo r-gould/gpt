@@ -6,14 +6,14 @@ def plot_stats(train_losses, valid_losses):
     plt.ylabel("Loss")
     plt.xlabel("Epochs")
     plt.plot(train_losses)
-    plt.savefig("gpt/images/train.png")
+    plt.savefig("images/train.png")
     plt.show()
 
     plt.title("Valid losses")
     plt.ylabel("Loss")
     plt.xlabel("Epochs")
     plt.plot(valid_losses, color="orange")
-    plt.savefig("gpt/images/valid.png")
+    plt.savefig("images/valid.png")
     plt.show()
 
     plt.title("Losses")
@@ -22,5 +22,5 @@ def plot_stats(train_losses, valid_losses):
     plt.plot(train_losses, label="Train")
     plt.plot(valid_losses, label="Valid")
     plt.legend(loc="upper right")
-    plt.savefig("gpt/images/both.png")
+    plt.savefig("images/both.png")
     plt.show()
