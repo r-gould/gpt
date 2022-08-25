@@ -1,0 +1,11 @@
+# Parameters for GPT-2 model as seen in paper:
+# https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf
+
+layers: 48
+num_heads: 25
+d_model: 1600
+d_v: 64
+d_k: 64
+d_ff: 6400
+dropout: 0.1
+window_size: 1024
