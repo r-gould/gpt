@@ -1,0 +1,11 @@
+# Parameters for GPT-1 model as seen in paper:
+# https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf
+
+layers: 12
+num_heads: 12
+d_model: 768
+d_v: 64
+d_k: 64
+d_ff: 3072
+dropout: 0.1
+window_size: 512
