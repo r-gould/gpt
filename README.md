@@ -2,7 +2,9 @@
 
 An implementation of the GPT model in PyTorch, as described originally in the paper '[Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)'.
 
-A demonstration for training the model is shown in main.py, and continuations can be generated as shown in the example below. The files gpt1.yaml, gtp2.yaml and gpt3.yaml include their respective parameters.
+A demonstration for training the model is shown in main.py, and continuations can be generated as shown in the example below. 
+
+Config files for GPT-1, GPT-2, and GPT-3 models can be found in configs, and can be chosen from using model_name in main.py
 
 # Example
 
